@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #e3e0e4; /* Light text for better contrast */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 3cm;
+    background-color: rgb(27, 26, 26);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1cm;
+}
+
+.logo-text {
+    height: 4cm; /* Adjust to match the height of the logo */
+    width: auto;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 4cm;
+    width: auto;
+}
+
+.nav-container {
+    margin-left: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.5cm;
+    color: #c0c0c0; /* Changed to silver */
+    margin: 0 0.8cm;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #c0c0c0; /* Changed to silver */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e3e0e4;
+    transform: translateY(-2px);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a.active {
+    color: #e3e0e4;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Section for Products */
+main {
+    margin: 1cm 1cm 3cm; /* Reduced top margin */
+    padding: 0 1cm; /* Keep padding on the sides */
+}
+
+/* Product Landing Section */
+.product-landing {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.product-landing h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e3e0e4;
+    margin-bottom: 1rem;
+}
+
+.product-landing p {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+    margin-bottom: 2rem;
+}
+
+/* Product Grid - Centered with Only 2 Products */
+.product-grid {
+    display: flex;
+    justify-content: center; /* Center the product cards horizontally */
+    gap: 1rem; /* Adjusted gap between products */
+    padding: 0;
+}
+
+/* Add a fade-in animation for the product cards when the page loads */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start below the normal position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in the normal position */
+    }
+}
+
+/* Apply the animation to the product cards */
+.product-card {
+    background-color: transparent; /* No background color */
+    padding: 0; /* Remove padding */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px; /* Slightly increased width */
+    margin: 0 10px;
+    border-radius: 8px; /* Rounded corners for the product card */
+    animation: fadeIn 0.6s ease-out; /* Animation for fade-in */
+    opacity: 1; /* Ensuring it's fully visible after the animation */
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
+/* Stagger the animation for product cards */
+.product-card:nth-child(1) {
+    animation: fadeIn 0.6s ease-out 0.2s; /* Delay the first card's animation */
+}
+
+.product-card:nth-child(2) {
+    animation: fadeIn 0.6s ease-out 0.4s; /* Delay the second card's animation */
+}
+
+/* Hover animation */
+.product-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Pink product hover glow effect */
+.product-card:nth-child(1):hover {
+    box-shadow: 0 0 30px 10px #ff69b4; /* Bright pink glow around the product */
+}
+
+/* Brown product hover glow effect */
+.product-card:nth-child(2):hover {
+    box-shadow: 0 0 30px 10px #8b4513; /* Bright brown glow around the product */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #e3e0e4;
+    margin-bottom: 0.8rem;
+}
+
+.product-card p {
+    color: #d0d0d0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Buy Now Button */
+.cta-button {
+    background-color: red; /* Default red for the button */
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b30000; /* Darker red on hover */
+}
+
+/* Footer */
+footer {
+    background-color: rgb(27, 26, 26); /* Matches the header */
+    color: #c0c0c0; /* Silver text for contrast */
+    text-align: center;
+    padding: 1.5rem 0; /* Vertical padding */
+    position: sticky bottom;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #c0c0c0;
+}
