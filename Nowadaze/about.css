@@ -9,11 +9,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000000;
-    color: #e3e0e4; /* Light text for better contrast */
+    color: #e3e0e4;
     line-height: 1.6;
 }
 
-/* Header */
 header {
     width: 100%;
     height: 3cm;
@@ -28,7 +27,7 @@ header {
 }
 
 .logo-text {
-  height: 4cm; /* Adjust to match the height of the logo */
+  height: 4cm;
   width: auto;
 }
 
@@ -53,7 +52,7 @@ header {
 
 .nav-links a {
     font-size: 0.5cm;
-    color: #c0c0c0; /* Changed to silver */
+    color: #c0c0c0; 
     margin: 0 0.8cm;
     text-decoration: none;
     position: relative;
@@ -65,7 +64,7 @@ header {
     display: block;
     width: 100%;
     height: 2px;
-    background: #c0c0c0; /* Changed to silver */
+    background: #c0c0c0; 
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -94,66 +93,61 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Main section styles */
 main {
     margin: 3cm 1cm 3cm;
-    padding: 2cm 1cm; /* Padding to give space around content */
-    background-color: #222222; /* Dark background for contrast */
-    border-radius: 10px; /* Rounded corners for a smoother look */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow to lift the content */
-    color: #e3e0e4; /* Ensure text is readable */
+    padding: 2cm 1cm; 
+    background-color: #222222; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    color: #e3e0e4; 
     font-size: 1.2rem;
     line-height: 1.8;
     letter-spacing: 0.5px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Start position */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 main.show {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Slide up */
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Glow effect when hovering over the main section */
 main:hover {
-    transform: scale(1.03); /* Slightly enlarge the content */
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8); /* Bright white glow */
-    background-color: #333333; /* Darken background on hover */
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+    background-color: #333333;
 }
 
-/* Glowing effect for the first letter */
 main p::first-letter {
-    font-size: 3rem; /* Make the first letter larger */
-    color: #e3e0e4; /* Lighter color for the first letter */
-    font-weight: bold; /* Make the first letter bold */
-    float: left; /* Allow text to flow around the letter */
-    margin-right: 0.5rem; /* Space between the large letter and the rest of the text */
-    transform: scale(1); /* Initial size */
-    transition: transform 0.5s ease, color 0.3s ease; /* Animate the letter */
+    font-size: 3rem;
+    color: #e3e0e4;
+    font-weight: bold;
+    float: left;
+    margin-right: 0.5rem;
+    transform: scale(1);
+    transition: transform 0.5s ease, color 0.3s ease;
 }
 
-/* Hover animation for first letter */
 main p:hover::first-letter {
-    transform: scale(1.5); /* Grow the letter */
-    color: #ff6347; /* Change the color when hovered */
+    transform: scale(1.5);
+    color: #ff6347;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .nav-links {
-    font-size: 0.4cm; /* Adjust font size on smaller screens */
+    font-size: 0.4cm;
   }
 
   main {
-    margin: 1.5cm 0.5cm; /* Adjust margins for smaller screens */
+    margin: 1.5cm 0.5cm;
     padding: 1.5cm 0.5cm;
   }
 }
 
 @media (max-width: 480px) {
   .nav-links {
-    font-size: 0.3cm; /* Adjust font size for mobile */
+    font-size: 0.3cm;
   }
 
   main {
@@ -162,12 +156,11 @@ main p:hover::first-letter {
   }
 }
 
-/* Footer */
 footer {
-    background-color: rgb(27, 26, 26); /* Matches the header */
-    color: #c0c0c0; /* Silver text for contrast */
+    background-color: rgb(27, 26, 26);
+    color: #c0c0c0;
     text-align: center;
-    padding: 1.5rem 0; /* Vertical padding */
+    padding: 1.5rem 0;
     position: sticky bottom;
     bottom: 0;
     width: 100%;
@@ -178,3 +171,4 @@ footer p {
     font-weight: 400;
     color: #c0c0c0;
 }
+```
